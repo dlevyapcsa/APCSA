@@ -16,6 +16,8 @@ void setup(){
     textSize(100);
     text("Popularity in pop over Time",350,200);
     table = loadTable("https://raw.githubusercontent.com/dlevyapcsa/APCSA/main/songs_normalize.csv", "header");
+   
+   //going through the rows for the artist, song, year, and genre
     for(TableRow row: table.rows()){
       String artist = row.getString("artist");
       String song = row.getString("song");
@@ -62,6 +64,10 @@ public void draw(){
   text("2017",1400,750);
   fill(30,140,100);
   circle(1400,500,radius3);
+  
+  //instructions
+  text("move your mouse to see the data", 100,70);
+  
 }
 
 // mouse pressed method 
